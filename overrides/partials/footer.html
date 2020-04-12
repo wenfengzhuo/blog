@@ -4,7 +4,7 @@
 <footer class="md-footer">
 
   <!-- Link to previous and/or next page -->
-  {% if page.previous_page or page.next_page %}
+  {% if config.extra.footer_nav and (page.previous_page or page.next_page) %}
     <div class="md-footer-nav">
       <nav
         class="md-footer-nav__inner md-grid"
@@ -66,7 +66,7 @@
       <div class="md-footer-copyright">
         {% if config.copyright %}
           <div class="md-footer-copyright__highlight">
-            {{ config.copyright }}
+            {{ config.copyright }}, made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank">Material for MkDocs</a>.
           </div>
         {% endif %}
       </div>
