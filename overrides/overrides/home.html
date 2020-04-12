@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+<!-- Disable site_nav -->
+{% block site_nav %}{% endblock %}
+
+{% block content %}
+<style>
+  .nav-item {
+    border-bottom: 1px solid #f2f2f0;
+  }
+
+  .nav-item-excerpt {
+    letter-spacing: -0.02em;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.59;
+    color: #666665;
+  }
+</style>
+
+<div>
+  {% with items = [] %}
+    {% for page in nav %}
+      {% if page.meta.date %}
+        {{ items.append((page.meta.date, page.url, page.title, page.content)) | default('', true) }}
+      {% endif %}
+    {% endfor %}
+    {% for item in items | sort(reverse=true) %}
+      <div class="nav-item">
+        <h2><a href="{{ item[1] | url }}">{{ item[2] }}</a></h2>
+        <section class="nav-item-excerpt">
+          <p>{{ item[3] | truncate(256) }}</p>
+        </section>
+      </div>
+    {% endfor %}
+  {% endwith %}
+</div>
+{% endblock %}
+
+    
