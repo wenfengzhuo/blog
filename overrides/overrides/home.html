@@ -5,6 +5,13 @@
 
 {% block content %}
 <style>
+  .override-nav {
+  }
+
+  .override-nav > div:first-of-type > h2:first-of-type {
+    margin-top: 0;
+  }
+ 
   .nav-item {
     border-bottom: 1px solid #f2f2f0;
   }
@@ -19,7 +26,7 @@
   }
 </style>
 
-<div>
+<div class="override-nav">
   {% with items = [] %}
     {% for page in nav %}
       {% if page.meta.date %}
