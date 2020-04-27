@@ -11,7 +11,7 @@
   .override-nav > div:first-of-type > h2:first-of-type {
     margin-top: 0;
   }
- 
+
   .nav-item {
     border-bottom: 1px solid #f2f2f0;
   }
@@ -22,6 +22,15 @@
     font-style: normal;
     font-size: 18px;
     line-height: 1.59;
+    color: #666665;
+  }
+
+  .nav-item span {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 16px;
     color: #666665;
   }
 </style>
@@ -39,10 +48,9 @@
         <section class="nav-item-excerpt">
           <p>{{ item[3] | truncate(256) }}</p>
         </section>
+        <span>{{ item[0] }}</span>
       </div>
     {% endfor %}
   {% endwith %}
 </div>
 {% endblock %}
-
-    

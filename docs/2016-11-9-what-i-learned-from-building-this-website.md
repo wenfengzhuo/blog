@@ -1,5 +1,5 @@
 ---
-date: 2016-11-09
+#date: 2016-11-09
 layout: post
 comments: falstrue
 categories: web-development
