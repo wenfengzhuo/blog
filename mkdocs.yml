@@ -1,8 +1,8 @@
 # Project information
 site_name: Wenfeng
-site_description: 
-site_author: Wenfeng Zhuo 
-site_url: https://wenfengzhuo.github.io 
+site_description:
+site_author: Wenfeng Zhuo
+site_url: https://wenfengzhuo.github.io
 
 # Copyright
 copyright: Copyright &copy; 2016 - 2020 Wenfeng Zhuo
@@ -33,7 +33,7 @@ extra:
 
 # Google Analytics
 google_analytics:
-  - UA-XXXXXXXX-X
+  - UA-128750316-1
   - auto
 
 # Extensions
